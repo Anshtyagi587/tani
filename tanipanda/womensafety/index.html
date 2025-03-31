@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women Safety in Cabs</title>
+    <link rel="stylesheet" href="home.css">
+    <script defer src="emergency.js"></script>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        header {
+            background: black;
+            padding: 15px 0;
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section with Background Image */
+        .hero {
+            background: url('hero-bg.png') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Dark Overlay */
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* CTA Buttons */
+        .cta-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .cta-btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: 0.3s ease;
+        }
+
+        .primary {
+            background: #ff4081;
+            color: white;
+        }
+
+        .primary:hover {
+            background: #c2185b;
+        }
+
+        .secondary {
+            background: #2196F3;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .secondary:hover {
+            background: #1565C0;
+        }
+
+        /* Features Section */
+        .features {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .feature-card {
+            background: #222;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+            width: 30%;
+            display: inline-block;
+            margin: 10px;
+            transition: 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card img {
+            width: 50px;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Women Safety in Cabs</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="safety-tips.html">Safety Tips</a></li>
+                    <li><a href="tracking.html">Live Tracking</a></li>
+                    <li><a href="contacts.html">Emergency Contacts</a></li>
+                    <li><a href="surveillance.html">In-Cab Surveillance</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">0
+        <div class="container">
+            <div class="hero-text">
+                <h2>Ensuring Safe Rides for Women</h2>
+                <p>Your safety is our top priority. Share your ride details and track locations in real-time.</p>
+                <div class="cta-buttons">
+                    <button id="emergencyBtn" class="cta-btn primary">🚨 Emergency Alert</button>
+                    <a href="tracking.html" class="cta-btn secondary">📍 Track Location</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="feature-card">
+                <img src="safe_ride.jpg" alt="Safe Rides Icon">
+                <h3>Safe Ride Guidelines</h3>
+                <p>Learn how to ensure your ride is secure before stepping into a cab.</p>
+            </div>
+            <div class="feature-card">
+                <img src="live_tracking.png" alt="Live Tracking Icon">
+                <h3>Real-Time Tracking</h3>
+                <p>Track your ride and share your location with loved ones.</p>
+            </div>
+            <div class="feature-card">
+                <img src="emergency.jpg" alt="Emergency Contacts Icon">
+                <h3>Quick Emergency Help</h3>
+                <p>Instantly send alerts to emergency contacts with your location.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Women Safety in Cabs | Stay Safe, Stay Alert</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Emergency Button -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("emergencyBtn").addEventListener("click", function() {
+                alert("🚨 Emergency alert sent! Stay Safe!");
+            });
+        });
+    </script>
+    
+  
+    
+    
+  
+    
+
+</body>
+</html>

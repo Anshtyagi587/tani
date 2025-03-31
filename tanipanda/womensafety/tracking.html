@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Tracking</title>
+    <link rel="stylesheet" href="tracking.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+</head>
+<body>
+
+<!-- Header with Navigation -->
+<header>
+    <div class="nav-container">
+        <a href="index.html" class="logo">Women Safety</a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="safety-tips.html">Safety Tips</a></li>
+                <li><a href="tracking.html">Live Tracking</a></li>
+                <li><a href="contacts.html">Emergency Contacts</a></li>
+                <li><a href="surveillance.html">In-Cab Surveillance</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h2>Live Tracking</h2>
+    <p>Track your real-time location to ensure a safer journey.</p>
+</section>
+
+<!-- Tracking Section -->
+<section class="tracking-section">
+    <h2>Track Your Location in Real-Time</h2>
+    
+    <!-- Location Box -->
+    <div class="location-box">
+        <p><strong>Your Current Location:</strong></p>
+        <p id="locationInfo">📍 Click "Start Tracking" to get your live location.</p>
+    </div>
+
+    <!-- Start Tracking Button -->
+    <button id="startTracking">Start Tracking</button>
+
+    <!-- Map Box -->
+    <div class="map-box">
+        <div id="map"></div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Women Safety in Cabs | Live Safe</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<script defer src="tracking.js"></script>
+
+</body>
+</html>

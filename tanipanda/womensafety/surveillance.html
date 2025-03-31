@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-Cab Surveillance</title>
+    <link rel="stylesheet" href="surveillance.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Women Safety</div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="safety-tips.html">Safety Tips</a></li>
+            <li><a href="tracking.html">Live Tracking</a></li>
+            <li><a href="contacts.html">Emergency Contacts</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="surveillance-container">
+    <h1>In-Cab Surveillance</h1>
+    <p>Stay safe with real-time monitoring and emergency alerts.</p>
+
+    <!-- Surveillance Box -->
+    <div class="surveillance-box">
+        <h2>Live Camera Feed</h2>
+        <div class="camera-box">
+            <video id="liveFeed" autoplay></video>
+        </div>
+    </div>
+
+    <!-- Emergency Alert Box -->
+    <div class="alert-box">
+        <h2>Emergency Alerts</h2>
+        <p>In case of danger, send an emergency alert instantly.</p>
+        <button id="emergencyAlert">⚠️ Send Emergency Alert</button>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Women Safety in Cabs | Stay Safe</p>
+</footer>
+
+<script>
+    // Simulate Live Camera Feed (User Permission Required)
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+            document.getElementById('liveFeed').srcObject = stream;
+        })
+        .catch(error => {
+            console.error("Camera access denied:", error);
+        });
+
+    // Emergency Alert Function
+    document.getElementById('emergencyAlert').addEventListener('click', () => {
+        alert("🚨 Emergency Alert Sent to Authorities & Emergency Contacts!");
+    });
+</script>
+
+</body>
+</html>
